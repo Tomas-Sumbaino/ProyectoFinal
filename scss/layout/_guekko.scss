@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: black;
+  }
+
+
+
+  header {
+    background-color: #111825;
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .options {
+    display: flex;
+  }
+
+  .options a:hover {
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .options a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-left: 300px; 
+    transition: transform 0.3s ease;
+  }
+
+  .logo img:hover {
+    transform: rotate(360deg);
+  }
+
+  #fondo-imagen {
+    background: url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt5aee65464000114a/62ee202299dab06ebd13de8d/1920x1080-KEY-ART_opt.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00000056;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+
+  #fondo-imagen:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px black;
+  }
+
+  main {
+    position: relative;
+    z-index: 0;
+    margin-top: 200px;
+    text-align: center;
+    padding: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+
+
+  #guekko-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+   
+    .video-container {
+        opacity: 0;
+        transition: opacity 1s;
+        width: 70%;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+      
+        &.fade-in {
+            opacity: 1;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px; 
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+#guekko-section .video-container {
+    animation: fadeIn 1s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

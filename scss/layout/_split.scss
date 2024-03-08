@@ -1,0 +1,136 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: black;
+}
+
+.bg-image {
+    background-image: url('https://static.wikia.nocookie.net/valorant/images/8/80/Valorant_Cover_Art.jpg/revision/latest?cb=20200311224515&path-prefix=es');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.options {
+    display: flex;
+
+    a:hover {
+        text-shadow: 2px 2px 4px black;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        margin: 0 10px;
+        font-family: 'Press Start 2P', cursive;
+    }
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+
+    img {
+        max-width: 100px;
+        border-radius: 50%;
+        margin-left: 300px; 
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+#mapas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+
+    .card {
+        width: 40rem;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+
+            .card-img-top {
+                transition: filter 0.5s ease;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-weight: bold;
+                text-shadow: 2px 2px 4px black;
+                transition: opacity 0.5s ease;
+            }
+
+            &:hover {
+                .card-img-top {
+                    filter: brightness(1.2);
+                }
+
+                .overlay {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+#split-imagen {
+    background: url("../assets/images/SPLIT.jpg") center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px black;
+  }
+  
+  #seleccion-agente {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px;
+    font-size: 3vw;
+    font-weight: bold;
+    border: 2px solid black;
+    margin: 10px auto; 
+    transition: background-color 0.5s ease;
+    display: block; 
+    width: auto; 
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  #seleccion-agente:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px black;
+    background-color: #aa2929b9;
+  }
+
+  

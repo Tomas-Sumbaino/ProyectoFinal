@@ -1,0 +1,73 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: black;
+}
+
+.bg-image {
+    background-image: url('https://static.wikia.nocookie.net/valorant/images/8/80/Valorant_Cover_Art.jpg/revision/latest?cb=20200311224515&path-prefix=es');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.options {
+    display: flex;
+
+    a:hover {
+        text-shadow: 2px 2px 4px black;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        margin: 0 10px;
+        font-family: 'Press Start 2P', cursive;
+    }
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+
+    img {
+        max-width: 100px;
+        border-radius: 50%;
+        margin-left: 300px; 
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+.card {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.card.fade-in {
+    opacity: 1;
+}
+
+
+#mapas .card {
+    animation: fadeIn 1s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
